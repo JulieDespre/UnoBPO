@@ -1,4 +1,4 @@
-package cartes;
+package uno.cartes;
 
 public enum Couleur {
     JAUNE("jaune"),BLEU("bleu"),ROUGE("rouge"),VERT("vert");

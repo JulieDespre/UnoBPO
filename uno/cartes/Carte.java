@@ -1,9 +1,8 @@
-package cartes;
+package uno.cartes;
 
 public class Carte {
 
     private int valeur ;
-
     private Couleur couleur ;
 
     public Carte(int valeur, Couleur couleur) {
@@ -29,9 +28,7 @@ public class Carte {
 
     public String toString() {
         return "Carte{" +
-                "valeur=" + valeur +
-                ", couleur=" + couleur +
-                '}';
+                "valeur=" + valeur + ", couleur=" + couleur + '}';
     }
 
 }

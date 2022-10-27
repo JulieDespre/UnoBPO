@@ -1,6 +1,4 @@
-package cartes;
-
-import java.util.Random;
+package uno.cartes;
 
 public class FabriqueCartes {
 
