@@ -19,7 +19,7 @@ public class TestCartes {
     }
 
     @Test
-   private static void TestPaquet2Cartes() {
+    private static void TestPaquet2Cartes() {
         Carte c1 = new Carte(5, Couleur.ROUGE);
         Carte c2 = new Carte(7, Couleur.JAUNE);
         PaquetDeCartes monPaquet = new PaquetDeCartes();
