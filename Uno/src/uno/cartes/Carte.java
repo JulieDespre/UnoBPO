@@ -1,9 +1,8 @@
 package uno.cartes;
 
 public class Carte {
-
-    private int valeur ;
-    private Couleur couleur ;
+    protected int valeur ;
+    protected Couleur couleur ;
 
     public Carte(int valeur, Couleur couleur) {
         this.valeur = valeur;
