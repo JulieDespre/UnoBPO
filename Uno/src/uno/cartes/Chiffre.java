@@ -4,17 +4,16 @@ import uno.jeu.Uno;
 
 public class Chiffre extends Carte{
 
-    public Chiffre(Uno u, int valeur, Couleur couleur){
-        super(valeur,couleur);
+    public Chiffre(Uno u, int v, Couleur c){
+        super(u, v, c);
     }
 
     @Override
     public void appliquerEffet() {
-
     }
 
     @Override
-    public boolean peutEtreRecouvertPas(Carte c) {
+    public boolean peutEtreRecouvertPar(Carte c) {
         return false;
     }
 

@@ -13,7 +13,7 @@ public class PasseTonTour extends Carte{
     }
 
     @Override
-    public boolean peutEtreRecouvertPas(Carte c) {
+    public boolean peutEtreRecouvertPar(Carte c) {
         return false;
     }
 

@@ -14,7 +14,7 @@ public class Plus2 extends Carte{
     }
 
     @Override
-    public boolean peutEtreRecouvertPas(Carte c) {
+    public boolean peutEtreRecouvertPar(Carte c) {
         return false;
     }
 

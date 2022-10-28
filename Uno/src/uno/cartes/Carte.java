@@ -48,7 +48,7 @@ public abstract class Carte {
         }
         return false;
     }
-    public abstract boolean peutEtreRecouvertPas (Carte c);
+    public abstract boolean peutEtreRecouvertPar (Carte c);
 
     public abstract boolean peutEtrePoseeSur (Plus2 c);
 
