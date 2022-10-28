@@ -11,6 +11,9 @@ public class PaquetDeCartes {
     public PaquetDeCartes(){
         paquet = new ArrayList<Carte> ();
     }
+    public PaquetDeCartes(int size){
+        paquet = new ArrayList<Carte> (size);
+    }
 
     public void ajouter (Carte... cartes){
         for (Carte c : cartes) {
