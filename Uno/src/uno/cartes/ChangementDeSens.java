@@ -20,6 +20,11 @@ public class ChangementDeSens extends Carte{
     }
 
     @Override
+    public boolean peutEtrePoseeSur(Chiffre c) {
+        return false;
+    }
+
+    @Override
     public boolean peutEtrePoseeSur(Plus2 c) {
         return false;
     }

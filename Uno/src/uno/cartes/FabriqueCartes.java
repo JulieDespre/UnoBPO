@@ -1,5 +1,7 @@
 package uno.cartes;
 
+import uno.jeu.Uno;
+
 public class FabriqueCartes {
 
     private static final FabriqueCartes fabrique = new FabriqueCartes();
@@ -23,8 +25,9 @@ public class FabriqueCartes {
     //}
 
     public PaquetDeCartes getPaquet1Vert() {
-        PaquetDeCartes paquet1 = new PaquetDeCartes ();
-        Carte carte1 = new Chiffre(1, Couleur.VERT);
+        Uno uno = new Uno();
+        PaquetDeCartes paquet1 = new PaquetDeCartes();
+        Carte carte1 = new Chiffre(uno, 5, Couleur.ROUGE);
         paquet1.ajouter(carte1);
         return paquet1;
     }
@@ -40,9 +43,10 @@ public class FabriqueCartes {
     //}
 
     public PaquetDeCartes getPaquet5Vert() {
+        Uno uno = new Uno ();
         PaquetDeCartes paquet2 = new PaquetDeCartes ();
         for (int i=0; i<5; i++) {
-            Carte cartei = new Chiffre(i+1, Couleur.VERT);
+            Carte cartei = new Chiffre (uno, i+1, Couleur.VERT);
             paquet2.ajouter(cartei);
         }
         return paquet2;

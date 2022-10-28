@@ -14,10 +14,10 @@ public abstract class Carte {
         this.uno = u;
     }
 
-    public Carte(Uno u, int v, Couleur c) {
-        this.valeur = v;
-        this.couleur = c;
-        this.uno = u;
+    public Carte(Uno uno, int valeur, Couleur couleur) {
+        this.valeur = valeur;
+        this.couleur = couleur;
+        this.uno = uno;
     }
 
     public int getValeur() {
@@ -49,6 +49,8 @@ public abstract class Carte {
         return false;
     }
     public abstract boolean peutEtreRecouvertPar (Carte c);
+
+    public abstract boolean peutEtrePoseeSur(Chiffre c);
 
     public abstract boolean peutEtrePoseeSur (Plus2 c);
 
