@@ -2,10 +2,9 @@ package uno.cartes;
 
 import uno.jeu.Uno;
 
-public class Chiffre extends Carte{
-
-    public Chiffre(Uno u, int valeur, Couleur couleur){
-        super(valeur,couleur);
+public class PasseTonTour extends Carte{
+    public PasseTonTour (Uno u, int v, Couleur c){
+        super(u, v, c);
     }
 
     @Override
@@ -20,7 +19,7 @@ public class Chiffre extends Carte{
 
     @Override
     public boolean peutEtrePoseeSur(Plus2 c) {
-        return estDeCouleurCompatibleAvec(c);
+        return false;
     }
 
     @Override
@@ -42,6 +41,4 @@ public class Chiffre extends Carte{
     public boolean peutEtrePoseeSur(PasseTonTour c) {
         return false;
     }
-
-
 }

@@ -14,9 +14,10 @@ public abstract class Carte {
         this.uno = u;
     }
 
-    public Carte(int valeur, Couleur couleur) {
-        this.valeur = valeur;
-        this.couleur = couleur;
+    public Carte(Uno u, int v, Couleur c) {
+        this.valeur = v;
+        this.couleur = c;
+        this.uno = u;
     }
 
     public int getValeur() {
@@ -42,9 +43,10 @@ public abstract class Carte {
         return true;
     }
     public boolean estDeCouleurCompatibleAvec(Carte c) {
-        if (this.getCouleur() == c.getCouleur(){
+        if (this.getCouleur() == c.getCouleur()){
+            return true;
         }
-        return true;
+        return false;
     }
     public abstract boolean peutEtreRecouvertPas (Carte c);
 
