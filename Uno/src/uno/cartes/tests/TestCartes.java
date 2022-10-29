@@ -3,10 +3,7 @@ package uno.cartes.tests;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import uno.cartes.Carte;
-import uno.cartes.Chiffre;
-import uno.cartes.Couleur;
-import uno.cartes.PaquetDeCartes;
+import uno.cartes.*;
 import uno.jeu.Uno;
 
 
@@ -15,7 +12,6 @@ public class TestCartes {
 
    @BeforeEach
    private void setUp() {
-
        uno = new Uno();
     }
 
@@ -34,9 +30,16 @@ public class TestCartes {
         Carte c2 = new Chiffre(uno, 5,Couleur.JAUNE);
         boolean test = c1.peutEtrePoseeSur((Chiffre) c2);
         Assertions.assertTrue(test == true);
-        Carte[] t =new Carte[5];
-        t[0]=c1;
-        System.out.println(t[0]);
+
+    }
+
+    @Test
+    public void TestPaquetStandard() {
+        FabriqueCartes maFabrique = FabriqueCartes.getFabrique();
+        PaquetDeCartes monPaquet = maFabrique.getPaquetStandard();
+        int test = monPaquet.getNombreDeCartes();
+        Assertions.assertEquals(108, test);
+
     }
 
 

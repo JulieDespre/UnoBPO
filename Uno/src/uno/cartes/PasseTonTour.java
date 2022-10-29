@@ -3,8 +3,8 @@ package uno.cartes;
 import uno.jeu.Uno;
 
 public class PasseTonTour extends Carte{
-    public PasseTonTour (Uno u, int v, Couleur c){
-        super(u, v, c);
+    public PasseTonTour (Uno uno, int valeur, Couleur couleur){
+        super(uno, valeur, couleur);
     }
 
     @Override
@@ -14,36 +14,11 @@ public class PasseTonTour extends Carte{
 
     @Override
     public boolean peutEtreRecouvertPar(Carte c) {
-        return false;
-    }
-
-    @Override
-    public boolean peutEtrePoseeSur(Chiffre c) {
-        return false;
-    }
-
-    @Override
-    public boolean peutEtrePoseeSur(Plus2 c) {
-        return false;
-    }
-
-    @Override
-    public boolean peutEtrePoseeSur(Plus4 c) {
-        return false;
-    }
-
-    @Override
-    public boolean peutEtrePoseeSur(Joker c) {
-        return false;
-    }
-
-    @Override
-    public boolean peutEtrePoseeSur(ChangementDeSens c) {
-        return false;
+        return c.peutEtrePoseeSur(this);
     }
 
     @Override
     public boolean peutEtrePoseeSur(PasseTonTour c) {
-        return false;
+        return true;
     }
 }

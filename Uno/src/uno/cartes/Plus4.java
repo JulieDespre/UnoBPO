@@ -3,7 +3,11 @@ package uno.cartes;
 import uno.jeu.Uno;
 
 public class Plus4 extends Joker{
-    public Plus4(Uno u, int v, Couleur c){
-        super(u, v, c);
+    public Plus4(Uno uno, int valeur, Couleur couleur){
+        super(uno, valeur, couleur);
+    }
+    @Override
+    public void appliquerEffet() {
+
     }
 }

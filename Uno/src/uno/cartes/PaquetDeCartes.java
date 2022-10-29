@@ -77,7 +77,6 @@ public class PaquetDeCartes {
         for (Carte c : paquet) {
             sb.append(c+"\n");
         }
-
         return sb.toString();
     }
 

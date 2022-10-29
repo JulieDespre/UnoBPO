@@ -4,8 +4,8 @@ import uno.jeu.Uno;
 
 public class Plus2 extends Carte{
 
-    public Plus2(Uno u, int v, Couleur c){
-        super(u, v, c);
+    public Plus2(Uno uno, int valeur, Couleur couleur){
+        super(uno, valeur, couleur);
     }
 
     @Override
@@ -15,36 +15,11 @@ public class Plus2 extends Carte{
 
     @Override
     public boolean peutEtreRecouvertPar(Carte c) {
-        return false;
-    }
-
-    @Override
-    public boolean peutEtrePoseeSur(Chiffre c) {
-        return false;
+        return c.peutEtrePoseeSur(this);
     }
 
     @Override
     public boolean peutEtrePoseeSur(Plus2 c) {
-        return false;
-    }
-
-    @Override
-    public boolean peutEtrePoseeSur(Plus4 c) {
-        return false;
-    }
-
-    @Override
-    public boolean peutEtrePoseeSur(Joker c) {
-        return false;
-    }
-
-    @Override
-    public boolean peutEtrePoseeSur(ChangementDeSens c) {
-        return false;
-    }
-
-    @Override
-    public boolean peutEtrePoseeSur(PasseTonTour c) {
-        return false;
+        return true;
     }
 }

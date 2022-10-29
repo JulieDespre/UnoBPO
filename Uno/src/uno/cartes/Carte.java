@@ -48,19 +48,30 @@ public abstract class Carte {
         }
         return false;
     }
-    public abstract boolean peutEtreRecouvertPar (Carte c);
+    public abstract boolean peutEtreRecouvertPar(Carte c);
+    public boolean peutEtrePoseeSur(Chiffre c){
+        return estDeCouleurCompatibleAvec(c);
+    }
 
-    public abstract boolean peutEtrePoseeSur(Chiffre c);
+    public boolean peutEtrePoseeSur(Plus2 c){
+        return estDeCouleurCompatibleAvec(c);
+    }
 
-    public abstract boolean peutEtrePoseeSur (Plus2 c);
+    public boolean peutEtrePoseeSur(Plus4 c){
+        return estDeCouleurCompatibleAvec(c);
+    }
 
-    public abstract boolean peutEtrePoseeSur (Plus4 c);
+    public boolean peutEtrePoseeSur(Joker c){
+        return estDeCouleurCompatibleAvec(c);
+    }
 
-    public abstract boolean peutEtrePoseeSur (Joker c);
+    public boolean peutEtrePoseeSur(ChangementDeSens c){
+        return estDeCouleurCompatibleAvec(c);
+    }
 
-    public abstract boolean peutEtrePoseeSur (ChangementDeSens c);
-
-    public abstract boolean peutEtrePoseeSur (PasseTonTour c);
+    public boolean peutEtrePoseeSur(PasseTonTour c){
+        return estDeCouleurCompatibleAvec(c);
+    }
 
     public String toString() {
         return "Carte{" +
