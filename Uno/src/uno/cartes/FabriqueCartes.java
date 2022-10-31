@@ -25,8 +25,56 @@ public class FabriqueCartes {
     public PaquetDeCartes getPaquet1Vert() {
         Uno uno = new Uno();
         PaquetDeCartes paquet1 = new PaquetDeCartes();
-        Chiffre carte1 = new Chiffre(uno, 5, Couleur.ROUGE);
+        Chiffre carte1 = new Chiffre(uno, 1, Couleur.VERT);
         paquet1.ajouter(carte1);
+        return paquet1;
+    }
+
+    public PaquetDeCartes getPaquet2Chiffre() {
+        Uno uno = new Uno();
+        PaquetDeCartes paquet2 = new PaquetDeCartes();
+        Chiffre carte3 = new Chiffre(uno, 5, Couleur.VERT);
+        paquet2.ajouter(carte3);
+        Chiffre carte4 = new Chiffre(uno, 5, Couleur.ROUGE);
+        paquet2.ajouter(carte4);
+        return paquet2;
+    }
+
+    public PaquetDeCartes getPaquet2ChiffreC() {
+        Uno uno = new Uno();
+        PaquetDeCartes paquet3 = new PaquetDeCartes();
+        Chiffre carte5 = new Chiffre(uno, 5, Couleur.VERT);
+        paquet3.ajouter(carte5);
+        Chiffre carte6 = new Chiffre(uno, 6, Couleur.ROUGE);
+        paquet3.ajouter(carte6);
+        return paquet3;
+    }
+    public PaquetDeCartes getPaquet2Diff() {
+        Uno uno = new Uno();
+        PaquetDeCartes paquet4 = new PaquetDeCartes();
+        Chiffre carte7 = new Chiffre(uno, 5, Couleur.VERT);
+        paquet4.ajouter(carte7);
+        Plus2 carte8 = new Plus2 (uno, 20, Couleur.VERT);
+        paquet4.ajouter(carte8);
+        return paquet4;
+    }
+
+    public PaquetDeCartes getPaquet2DiffCoul() {
+        Uno uno = new Uno();
+        PaquetDeCartes paquet5 = new PaquetDeCartes();
+        Chiffre carte9 = new Chiffre(uno, 5, Couleur.VERT);
+        paquet5.ajouter(carte9);
+        Plus2 carte10 = new Plus2 (uno, 20, Couleur.ROUGE);
+        paquet5.ajouter(carte10);
+        return paquet5;
+    }
+    public PaquetDeCartes getPaquet2CoulSpe() {
+        Uno uno = new Uno();
+        PaquetDeCartes paquet1 = new PaquetDeCartes();
+        Chiffre carte1 = new Chiffre(uno, 5, Couleur.VERT);
+        paquet1.ajouter(carte1);
+        Joker carte2 = new Joker (uno, 50, Couleur.NOIR);
+        paquet1.ajouter(carte2);
         return paquet1;
     }
 
@@ -39,6 +87,17 @@ public class FabriqueCartes {
     //}
     //return paquet2;
     //}
+    public PaquetDeCartes getPaquet3Rouge() {
+        Uno uno = new Uno ();
+        PaquetDeCartes paquet4 = new PaquetDeCartes ();
+        Chiffre carte1 = new Chiffre (uno, 5, Couleur.ROUGE);
+        paquet4.ajouter(carte1);
+        Chiffre carte2 = new Chiffre (uno, 9, Couleur.ROUGE);
+        paquet4.ajouter(carte2);
+        Chiffre carte3 = new Chiffre (uno, 1, Couleur.ROUGE);
+        paquet4.ajouter(carte3);
+        return paquet4;
+    }
 
     public PaquetDeCartes getPaquet5Vert() {
         Uno uno = new Uno ();
@@ -48,6 +107,25 @@ public class FabriqueCartes {
             paquet2.ajouter(cartei);
         }
         return paquet2;
+    }
+
+
+    public PaquetDeCartes getPaquet6() {
+        Uno uno = new Uno ();
+        PaquetDeCartes paquet3 = new PaquetDeCartes ();
+        Chiffre carte1 = new Chiffre (uno, 6, Couleur.VERT);
+        paquet3.ajouter(carte1);
+        PasseTonTour carte2 = new PasseTonTour(uno, 20, Couleur.ROUGE);
+        paquet3.ajouter(carte2);
+        Plus2 carte3 = new Plus2(uno, 20, Couleur.JAUNE);
+        paquet3.ajouter(carte3);
+        Chiffre carte4 = new Chiffre (uno, 6, Couleur.ROUGE);
+        paquet3.ajouter(carte4);
+        Chiffre carte5 = new Chiffre (uno, 6, Couleur.JAUNE);
+        paquet3.ajouter(carte5);
+        Joker carte6 = new Joker (uno, 50, Couleur.NOIR);
+        paquet3.ajouter(carte6);
+        return paquet3;
     }
     public PaquetDeCartes getPaquetStandard() {
         Uno uno = new Uno ();

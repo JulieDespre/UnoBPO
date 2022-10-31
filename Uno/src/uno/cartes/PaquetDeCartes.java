@@ -8,21 +8,22 @@ public class PaquetDeCartes {
 
     private ArrayList<Carte> paquet;
 
-    public PaquetDeCartes(){
-        paquet = new ArrayList<Carte> ();
-    }
-    public PaquetDeCartes(int size){
-        paquet = new ArrayList<Carte> (size);
+    public PaquetDeCartes() {
+        paquet = new ArrayList<Carte>();
     }
 
-    public void ajouter (Carte... cartes){
+    public PaquetDeCartes(int size) {
+        paquet = new ArrayList<Carte>(size);
+    }
+
+    public void ajouter(Carte... cartes) {
         for (Carte c : cartes) {
             paquet.add(c);
         }
     }
 
-    public void ajouter (PaquetDeCartes pdc){
-        while (pdc.getNombreDeCartes()<0){
+    public void ajouter(PaquetDeCartes pdc) {
+        while (pdc.getNombreDeCartes() > 0) {
             Carte addCarte = pdc.piocher();
             paquet.add(addCarte);
         }
@@ -50,13 +51,31 @@ public class PaquetDeCartes {
     }
 
     public Carte getSommet() {
-        return (paquet.get((paquet.size())-1));
+        //int sommet = 0;
+        //if (this.estVide() == true){
+            //return sommet;
+       // }else {
+            return (paquet.get((paquet.size()) - 1));
+        //}
     }
 
     public Carte piocher() {
-        Carte newCarte = paquet.get((paquet.size())-1);
-        paquet.remove((paquet.size())-1);
-        return newCarte;
+            Carte newCarte = paquet.get((paquet.size())-1);
+            paquet.remove((paquet.size())-1);
+            return newCarte;
+        }
+
+
+    public void enlever(Carte carte) {
+        for (int i=0; i<paquet.size(); i++){
+            if(paquet.get(i) == carte){
+                paquet.remove(paquet.get(i));
+                break;
+            }
+
+            //if (paquet.contains(carte)){
+            //paquet.remove(carte);
+        }
     }
 
     public void melanger() {
@@ -71,6 +90,12 @@ public class PaquetDeCartes {
         paquet.set(i,paquet.get(j));
         paquet.set(j,tempCarte);
     }
+    public void retourner() {
+        for (int i=0; i< paquet.size()/2; i++) {
+            int taille = paquet.size();
+            swap(i, taille-1-i);
+        }
+        }
 
     public String toString() {
         StringBuilder sb=new StringBuilder("Paquet:\n");

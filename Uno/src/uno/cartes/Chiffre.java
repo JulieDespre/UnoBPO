@@ -9,7 +9,8 @@ public class Chiffre extends Carte{
         this.numero = valeur;
     }
     public int getNumero(){
-    return numero;
+
+        return numero;
     }
 
     @Override
