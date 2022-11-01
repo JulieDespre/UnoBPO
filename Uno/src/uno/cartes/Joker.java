@@ -6,6 +6,8 @@ public class Joker extends Carte {
 
     public Joker (Uno u, int v, Couleur c){
         super(u, v, c);
+        assert v == 50 : "la valeur de la carte Joker n'est pas bonne";
+        assert c == Couleur.NOIR : "la couleur de la carte Joker n'est pas bonne";
     }
 
     @Override
@@ -46,5 +48,13 @@ public class Joker extends Carte {
     @Override
     public boolean peutEtrePoseeSur(PasseTonTour c) {
         return true;
+    }
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof Joker) {
+           return true;
+        } else {
+            return false;
+        }
     }
 }

@@ -68,8 +68,8 @@ public class PaquetDeCartes {
 
     public void enlever(Carte carte) {
         for (int i=0; i<paquet.size(); i++){
-            if(paquet.get(i) == carte){
-                paquet.remove(paquet.get(i));
+            if(paquet.get(i).equals(carte)){
+                paquet.remove(i);
                 break;
             }
 

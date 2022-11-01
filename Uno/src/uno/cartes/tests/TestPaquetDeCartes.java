@@ -90,41 +90,65 @@ public class TestPaquetDeCartes {
         PaquetDeCartes monPaquet = maFabrique.getPaquetVide();
         int test = monPaquet.getValeur();
         Assertions.assertEquals(0, test);
+    }
+    @Test
+    public void TestGetValeur2() {
         // paquet 1 carte
         FabriqueCartes maFabrique2 = FabriqueCartes.getFabrique();
         PaquetDeCartes monPaquet2 = maFabrique2.getPaquet1Vert();
         int test2 = monPaquet2.getValeur();
         Assertions.assertEquals(1, test2);
+    }
+    @Test
+    public void TestGetValeur3() {
         //paquet 2 cartes meme couleur (rouge)
         FabriqueCartes maFabrique3 = FabriqueCartes.getFabrique();
         PaquetDeCartes monPaquet3 = maFabrique3.getPaquet2Chiffre();
-        int test3= monPaquet3.getValeur();
+        int test3 = monPaquet3.getValeur();
         Assertions.assertEquals(10, test3);
+    }
+    @Test
+    public void TestGetValeur4() {
         //paquet 2 cartes meme couleur chiffre, plus2 (vert)
         FabriqueCartes maFabrique4 = FabriqueCartes.getFabrique();
         PaquetDeCartes monPaquet4 = maFabrique4.getPaquet2Diff();
-        int test4= monPaquet4.getValeur();
+        int test4 = monPaquet4.getValeur();
         Assertions.assertEquals(25, test4);
+    }
+    @Test
+    public void TestGetValeur5() {
         //paquet 2 cartes  diff couleur chiffre, plus2 (vert et rouge)
         FabriqueCartes maFabrique5 = FabriqueCartes.getFabrique();
         PaquetDeCartes monPaquet5 = maFabrique5.getPaquet2DiffCoul();
-        int test5= monPaquet5.getValeur();
+        int test5 = monPaquet5.getValeur();
         Assertions.assertEquals(25, test5);
+    }
+    @Test
+    public void TestGetValeur6() {
         //paquet 2 cartes  diff couleur chiffre, Joker)
         FabriqueCartes maFabrique6 = FabriqueCartes.getFabrique();
         PaquetDeCartes monPaquet6 = maFabrique6.getPaquet2CoulSpe();
-        int test6= monPaquet6.getValeur();
+        int test6 = monPaquet6.getValeur();
         Assertions.assertEquals(55, test6);
+    }
+    @Test
+    public void TestGetValeur7() {
         //paquet 5 cartes meme couleur (verte)
         FabriqueCartes maFabrique7 = FabriqueCartes.getFabrique();
         PaquetDeCartes monPaquet7 = maFabrique7.getPaquet5Vert();
-        int test7= monPaquet7.getValeur();
+        int test7 = monPaquet7.getValeur();
         Assertions.assertEquals(15, test7);
+    }
+    @Test
+    public void TestGetValeur8() {
         //paquet de 6 cartes
         FabriqueCartes maFabrique1 = FabriqueCartes.getFabrique();
         PaquetDeCartes monPaquet1 = maFabrique1.getPaquet6();
         int test1 = monPaquet1.getValeur();
         Assertions.assertEquals(108, test1);
+    }
+    @Test
+    public void TestGetValeur9() {
         //paquet standard
         FabriqueCartes maFabrique8 = FabriqueCartes.getFabrique();
         PaquetDeCartes monPaquet8 = maFabrique8.getPaquetStandard();
@@ -140,6 +164,9 @@ public class TestPaquetDeCartes {
         monPaquet.ajouter(c1);
         int test = monPaquet.getNombreDeCartes();
         Assertions.assertEquals(1, test);
+    }
+    @Test
+    public void TestAjouter2() {
         //paquet 2 cartes meme couleur chiffre, plus2 (vert)
         FabriqueCartes maFabrique4 = FabriqueCartes.getFabrique();
         PaquetDeCartes monPaquet4 = maFabrique4.getPaquet2Diff();
@@ -147,6 +174,9 @@ public class TestPaquetDeCartes {
         monPaquet4.ajouter(c2);
         int test4 = monPaquet4.getNombreDeCartes();
         Assertions.assertEquals(3, test4);
+    }
+    @Test
+    public void TestAjouter3() {
         //paquet 2 cartes meme couleur chiffre, plus2 (vert)
         FabriqueCartes maFabrique5 = FabriqueCartes.getFabrique();
         PaquetDeCartes monPaquet5 = maFabrique5.getPaquet2Diff();
@@ -172,6 +202,9 @@ public class TestPaquetDeCartes {
         monPaquet.ajouter(paquetAdd);
         int test = monPaquet.getNombreDeCartes();
         Assertions.assertEquals(3, test);
+    }
+    @Test
+    public void TestAjouterPDC2() {
         //ajouter un pcd à un autre pdc
         FabriqueCartes maFabrique4 = FabriqueCartes.getFabrique();
         PaquetDeCartes monPaquet4 = maFabrique4.getPaquet2Diff();
@@ -188,6 +221,9 @@ public class TestPaquetDeCartes {
         PaquetDeCartes monPaquet = maFabrique.getPaquetVide();
         boolean test = monPaquet.estVide();
         Assertions.assertTrue(test);
+    }
+    @Test
+    public void TestEstVide2() { //boolean EstVide()
         //paquet 2 cartes meme couleur chiffre, plus2 (vert)
         FabriqueCartes maFabrique4 = FabriqueCartes.getFabrique();
         PaquetDeCartes monPaquet4 = maFabrique4.getPaquet2Diff();
@@ -211,7 +247,7 @@ public class TestPaquetDeCartes {
         PaquetDeCartes monPaquet4 = maFabrique4.getPaquet2Diff();
         monPaquet4.piocher();
         Carte test4 = monPaquet4.getSommet();
-        Plus2 c1 = new Plus2 (uno, 5, Couleur.VERT);
+        Plus2 c1= new Plus2 (uno, 5, Couleur.VERT);
         Assertions.assertEquals(c1.toString(), test4.toString());
     }
     @Test
@@ -225,8 +261,21 @@ public class TestPaquetDeCartes {
         monPaquet4.enlever(c1);
         System.out.println(monPaquet4);
         int test4 = monPaquet4.getNombreDeCartes();
-        //Assertions.assertEquals(1, test4);
+        Assertions.assertEquals(1, test4);
     }
+    @Test
+    public void TestEnlever2() { //paquet 6 cartes
+        //paquet 2 cartes meme couleur chiffre, plus2 (vert)
+        FabriqueCartes maFabrique4 = FabriqueCartes.getFabrique();
+        PaquetDeCartes monPaquet4 = maFabrique4.getPaquet6();
+        System.out.println(monPaquet4);
+        Joker c1 = new Joker (uno, 50, Couleur.NOIR);
+        monPaquet4.enlever(c1);
+        System.out.println(monPaquet4);
+        int test4 = monPaquet4.getNombreDeCartes();
+        Assertions.assertEquals(5, test4);
+    }
+
 
     @Test
     public void TestMelanger() {
@@ -237,12 +286,15 @@ public class TestPaquetDeCartes {
         monPaquet4.melanger();
         String test4 = monPaquet4.toString();
         String test5 = monPaquet2.toString();
-        assert(test5 != test4);
+        assert (test5 != test4);
+    }
 
+        @Test
+        public void TestMelanger2() {
         //paquet 6 cartes differentes couleur chiffre, plus2, PTT, Jocker  (vert)
         FabriqueCartes maFabrique2 = FabriqueCartes.getFabrique();
         PaquetDeCartes monPaquet = maFabrique2.getPaquet6();
-        PaquetDeCartes monPaquet5 = maFabrique4.getPaquet6();
+        PaquetDeCartes monPaquet5 = maFabrique2.getPaquet6();
         monPaquet.melanger();
         String test = monPaquet.toString();
         String test2 = monPaquet5.toString();
@@ -257,7 +309,9 @@ public class TestPaquetDeCartes {
         monPaquet4.retourner();
         Carte test5 = monPaquet4.getSommet();
         assert (test5 != test4);
-
+    }
+    @Test
+    public void TestRetourner2() {
         //paquet 6 cartes différentes
         FabriqueCartes maFabrique5 = FabriqueCartes.getFabrique();
         PaquetDeCartes monPaquet5 = maFabrique5.getPaquet6();
@@ -267,7 +321,44 @@ public class TestPaquetDeCartes {
         Carte test7 = monPaquet5.getSommet();
         int tailleAp = monPaquet5.getNombreDeCartes();
         assert (test7 != test6 && tailleAv == tailleAp);
-
     }
+    @Test
+    public void TestEquals() { //chiffre
+        Chiffre c1 = new Chiffre(uno, 5, Couleur.JAUNE);
+        Chiffre c2 = new Chiffre(uno, 5, Couleur.JAUNE);
+        boolean test = c1.equals(c2);
+        assert (test);
+    }
+    @Test
+    public void TestEquals1() { //changement de sans
+        ChangementDeSens c1 = new ChangementDeSens(uno, 20, Couleur.JAUNE);
+        ChangementDeSens c2 = new ChangementDeSens(uno, 20, Couleur.JAUNE);
+        boolean test = c1.equals(c2);
+        assert (test);
+    }
+    @Test
+    public void TestEquals2() { //changement de sans
+        Joker c1 = new Joker(uno, 50, Couleur.NOIR);
+        Joker c2 = new Joker(uno, 50, Couleur.NOIR);
+        boolean test = c1.equals(c2);
+        assert (test);
+    }
+    @Test
+    public void TestEquals3() { //changement de sans
+        PasseTonTour c1 = new PasseTonTour(uno, 20, Couleur.JAUNE);
+        Joker c2 = new Joker(uno, 20, Couleur.JAUNE);
+        boolean test = c1.equals(c2);
+        assert (test);
+    }
+
+    @Test
+    public void constructionJoker() {
+        Joker j = new Joker (uno, 50, Couleur.NOIR);
+    }
+    @Test
+    public void constructionChiffre() {
+        Chiffre c = new Chiffre (uno, 9, Couleur.ROUGE);
+    }
+
 }
 

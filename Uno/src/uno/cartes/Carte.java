@@ -11,6 +11,7 @@ public abstract class Carte {
     protected Uno uno;
 
     public Carte (Uno u){
+
         this.uno = u;
     }
 
@@ -29,10 +30,12 @@ public abstract class Carte {
     }
 
     public Couleur getCouleur() {
+
         return couleur;
     }
 
     public void setCouleur(Couleur couleur) {
+
         this.couleur = couleur;
     }
     public abstract void appliquerEffet();
@@ -50,10 +53,12 @@ public abstract class Carte {
     }
     public abstract boolean peutEtreRecouvertPar(Carte c);
     public boolean peutEtrePoseeSur(Chiffre c){
+
         return estDeCouleurCompatibleAvec(c);
     }
 
     public boolean peutEtrePoseeSur(Plus2 c){
+
         return estDeCouleurCompatibleAvec(c);
     }
 
@@ -66,10 +71,12 @@ public abstract class Carte {
     }
 
     public boolean peutEtrePoseeSur(ChangementDeSens c){
+
         return estDeCouleurCompatibleAvec(c);
     }
 
     public boolean peutEtrePoseeSur(PasseTonTour c){
+
         return estDeCouleurCompatibleAvec(c);
     }
 
@@ -78,8 +85,5 @@ public abstract class Carte {
                 "valeur=" + valeur + ", couleur=" + couleur + '}';
     }
 
-    @Override
-    public boolean equals(Object obj) {
-        return super.equals(obj);
-    }
+
 }
