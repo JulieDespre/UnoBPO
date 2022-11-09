@@ -7,7 +7,7 @@ public class Chiffre extends Carte{
     public Chiffre(Uno uno, int valeur, Couleur couleur){
         super(uno, valeur, couleur);
         this.numero = valeur;
-        assert valeur>0 && valeur<10  : "la valeur de la carte chiffre n'est pas bonne";
+        assert valeur>=0 && valeur<10  : "la valeur de la carte chiffre n'est pas bonne";
         assert couleur != Couleur.NOIR : "la couleur de la carte chiffre n'est pas bonne";
     }
     public int getNumero(){
@@ -20,6 +20,7 @@ public class Chiffre extends Carte{
 
     @Override
     public boolean peutEtreRecouvertPar(Carte c){
+
         return c.peutEtrePoseeSur(this);
     }
 

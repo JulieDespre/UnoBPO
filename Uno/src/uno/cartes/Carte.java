@@ -42,8 +42,9 @@ public abstract class Carte {
 
     public boolean estSansCouleur(){
         if (this.getCouleur() == NOIR){
+            return true;
         }
-        return true;
+        return false;
     }
     public boolean estDeCouleurCompatibleAvec(Carte c) {
         if (this.getCouleur() == c.getCouleur()){
@@ -63,10 +64,12 @@ public abstract class Carte {
     }
 
     public boolean peutEtrePoseeSur(Plus4 c){
+
         return estDeCouleurCompatibleAvec(c);
     }
 
     public boolean peutEtrePoseeSur(Joker c){
+
         return estDeCouleurCompatibleAvec(c);
     }
 
