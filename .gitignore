@@ -1,5 +1,9 @@
 ### IntelliJ IDEA ###
 out/
+
+/out
+/.idea
+.iml
 !**/src/main/**/out/
 !**/src/test/**/out/
 
@@ -27,7 +31,3 @@ bin/
 
 ### Mac OS ###
 .DS_Store
-
-/out
-/.idea
-.iml

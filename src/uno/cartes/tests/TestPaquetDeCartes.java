@@ -286,10 +286,8 @@ public class TestPaquetDeCartes {
         //paquet 2 cartes meme couleur chiffre, plus2 (vert)
         FabriqueCartes maFabrique4 = FabriqueCartes.getFabrique();
         PaquetDeCartes monPaquet4 = maFabrique4.getPaquet2Diff();
-        System.out.println(monPaquet4);
         Chiffre c1 = new Chiffre (uno, 5, Couleur.VERT);
         monPaquet4.enlever(c1);
-        System.out.println(monPaquet4);
         int test4 = monPaquet4.getNombreDeCartes();
         Assertions.assertEquals(1, test4);
     }
