@@ -118,6 +118,8 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="11" />
       <option name="PACKAGE_NAME" value="uno.cartes.tests" />
       <option name="MAIN_CLASS_NAME" value="uno.cartes.tests.TestCartes" />
       <option name="METHOD_NAME" value="TestPeutEtreRecouvertParChiffreCarteSpeNot" />
@@ -152,8 +154,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.null." />
         <item itemvalue="JUnit.TestCartes.TestPeutEtreRecouvertParChiffreCarteSpeNot" />
+        <item itemvalue="JUnit.null." />
         <item itemvalue="JUnit.TestCartes.TestPeutEtreRecouvertParCarteSpeChiffreNot" />
         <item itemvalue="JUnit.TestCartes.TestPeutEtreRecouvertParCarteSpeChiffreNOT" />
         <item itemvalue="JUnit.TestCartes.TestPeutEtreRecouvertParChiffreCarteSpe" />
