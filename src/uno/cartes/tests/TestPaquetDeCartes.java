@@ -6,6 +6,8 @@ import org.junit.jupiter.api.Test;
 import uno.cartes.*;
 import uno.jeu.Uno;
 
+import java.io.IOException;
+
 
 public class TestPaquetDeCartes {
     private Uno uno;
@@ -21,6 +23,8 @@ public class TestPaquetDeCartes {
         Chiffre c2 = new Chiffre(uno, 7,Couleur.JAUNE);
         PaquetDeCartes monPaquet = new PaquetDeCartes();
         monPaquet.ajouter(c1,c2);
+        try{monPaquet.ecrire("test.txt");}
+        catch (ErreurFichier e){System.out.println(e.getMessage());}
         int test = monPaquet.getNombreDeCartes();
         Assertions.assertEquals(2, test);
     }

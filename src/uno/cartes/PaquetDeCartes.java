@@ -1,6 +1,7 @@
 package uno.cartes;
 
 
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -105,7 +106,31 @@ public class PaquetDeCartes {
         return sb.toString();
     }
 
+    public void ecrire(String nomDeFichier) throws ErreurFichier{
+        FileWriter flot;
+        PrintWriter flotP;
+
+
+            File monfichier=new File(nomDeFichier);
+            if ( monfichier.exists()) throw new ErreurFichier("Le fichier existe déjà.");
+           try {
+               flot = new FileWriter(monfichier);
+               flotP = new PrintWriter(flot);//buggeredwriter amélioré
+               for (Carte carte : paquet) {
+                   flotP.println("" + carte.getClass().getSimpleName() + " " + carte.getValeur() + " " + carte.getCouleur());
+               }
+
+               flotP.close();
+           }catch (IOException e){//!IOexception message java
+               System.out.println(e.getMessage());
+           }
+
+            //tentative pour utiliser l'aide
+
+
+    }
+
+    }
 
 
 
-}
