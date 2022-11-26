@@ -23,7 +23,7 @@ public class TestPaquetDeCartes {
         Chiffre c2 = new Chiffre(uno, 7,Couleur.JAUNE);
         PaquetDeCartes monPaquet = new PaquetDeCartes();
         monPaquet.ajouter(c1,c2);
-        try{monPaquet.ecrire("test.txt");}
+        try{monPaquet.ecrire("Paquet2Cartes.txt");}
         catch (ErreurFichier e){System.out.println(e.getMessage());}
         int test = monPaquet.getNombreDeCartes();
         Assertions.assertEquals(2, test);
@@ -402,6 +402,21 @@ public class TestPaquetDeCartes {
         Chiffre c2 = new Chiffre(uno, 5, Couleur.ROUGE);
         boolean test = c1.equals(c2);
         assert (!test);
+    }
+    @Test
+    public void testEcrire() {
+        FabriqueCartes maFabrique = FabriqueCartes.getFabrique();
+        PaquetDeCartes monPaquet = maFabrique.getPaquetStandard();
+        try {monPaquet.ecrire("paquetStandard.txt");}
+        catch (ErreurFichier e){System.out.println(e.getMessage());}
+    }
+
+    @Test
+    public void testLire() {
+        FabriqueCartes maFabrique = FabriqueCartes.getFabrique();
+        PaquetDeCartes monPaquet = maFabrique.getPaquetVide();
+        try {monPaquet.lire("Paquet2Cartes.txt");}
+        catch (ErreurFichier e){System.out.println(e.getMessage());}
     }
 
 

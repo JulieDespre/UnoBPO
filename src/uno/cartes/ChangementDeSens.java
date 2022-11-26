@@ -11,7 +11,13 @@ public class ChangementDeSens extends Carte{
 
     }
 
+    //constructeur sans uno
+    public ChangementDeSens (int valeur, Couleur couleur){
+        super(valeur, couleur);
+        assert valeur>0 && valeur==20  : "la valeur de la carte changement de sens n'est pas bonne";
+        assert couleur != Couleur.NOIR : "la couleur de la carte changemet de sens n'est pas bonne";
 
+    }
     @Override
     public void appliquerEffet() {
 

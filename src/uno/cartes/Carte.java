@@ -21,6 +21,11 @@ public abstract class Carte {
         this.uno = uno;
     }
 
+    public Carte(int valeur, Couleur couleur) {
+        this.valeur = valeur;
+        this.couleur = couleur;
+    }
+
     public int getValeur() {
         return valeur;
     }
@@ -81,6 +86,9 @@ public abstract class Carte {
     public boolean peutEtrePoseeSur(PasseTonTour c){
 
         return estDeCouleurCompatibleAvec(c);
+    }
+    void setUno(Uno uno){
+        this.uno = uno;
     }
 
     public String toString() {

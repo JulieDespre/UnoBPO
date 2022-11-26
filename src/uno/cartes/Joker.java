@@ -10,6 +10,13 @@ public class Joker extends Carte {
         assert c == Couleur.NOIR : "la couleur de la carte Joker n'est pas bonne";
     }
 
+    //constructeur sans uno
+    public Joker (int v, Couleur c){
+        super(v, c);
+        assert v == 50 : "la valeur de la carte Joker n'est pas bonne";
+        assert c == Couleur.NOIR : "la couleur de la carte Joker n'est pas bonne";
+    }
+
     @Override
     public void appliquerEffet() {
 

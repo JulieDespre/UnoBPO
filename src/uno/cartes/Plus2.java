@@ -10,6 +10,14 @@ public class Plus2 extends Carte{
         assert couleur != Couleur.NOIR : "la couleur de la carte Plus2 n'est pas bonne";
     }
 
+    //constructeur sans uno
+    public Plus2(int valeur, Couleur couleur){
+        super(valeur, couleur);
+        assert valeur>0 && valeur == 20 : "la valeur de la carte Plus2 n'est pas bonne";
+        assert couleur != Couleur.NOIR : "la couleur de la carte Plus2 n'est pas bonne";
+    }
+
+
     @Override
     public void appliquerEffet() {
 

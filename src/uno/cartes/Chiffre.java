@@ -10,6 +10,14 @@ public class Chiffre extends Carte{
         assert valeur>=0 && valeur<10  : "la valeur de la carte chiffre n'est pas bonne";
         assert couleur != Couleur.NOIR : "la couleur de la carte chiffre n'est pas bonne";
     }
+
+    //constructeur sans uno
+    public Chiffre(int valeur, Couleur couleur){
+        super(valeur, couleur);
+        this.numero = valeur;
+        assert valeur>=0 && valeur<10  : "la valeur de la carte chiffre n'est pas bonne";
+        assert couleur != Couleur.NOIR : "la couleur de la carte chiffre n'est pas bonne";
+    }
     public int getNumero(){
         return numero;
     }

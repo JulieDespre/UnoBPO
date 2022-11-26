@@ -57,6 +57,13 @@ public class TestCartes {
         int test = j1.getValeur();
         Assertions.assertEquals(50, test);
     }
+    @Test
+    public void TestGetValeurCarteNoireSansUno(){//test constructeur sans uno
+        Joker j1 = new Joker(50, Couleur.NOIR);
+        int test = j1.getValeur();
+        System.out.println(j1);
+        Assertions.assertEquals(50, test);
+    }
 
     @Test
     public void TestGetValeurCarteNoire2(){

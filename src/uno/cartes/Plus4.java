@@ -8,6 +8,13 @@ public class Plus4 extends Joker{
         assert valeur>0 && valeur==50  : "la valeur de la carte Plus4 n'est pas bonne";
         assert couleur == Couleur.NOIR : "la couleur de la carte Plus4 n'est pas bonne";
     }
+
+    //constructeur sans uno
+    public Plus4(int valeur, Couleur couleur){
+        super(valeur, couleur);
+        assert valeur>0 && valeur==50  : "la valeur de la carte Plus4 n'est pas bonne";
+        assert couleur == Couleur.NOIR : "la couleur de la carte Plus4 n'est pas bonne";
+    }
     @Override
     public void appliquerEffet() {
     }
