@@ -412,13 +412,19 @@ public class TestPaquetDeCartes {
     }
 
     @Test
-    public void testLire() {
+    public void testLire2Chiffres() {
         FabriqueCartes maFabrique = FabriqueCartes.getFabrique();
         PaquetDeCartes monPaquet = maFabrique.getPaquetVide();
         try {monPaquet.lire("Paquet2Cartes.txt");}
         catch (ErreurFichier e){System.out.println(e.getMessage());}
     }
-
+    @Test
+    public void testLire2CartesDiff() {//en cours
+        FabriqueCartes maFabrique = FabriqueCartes.getFabrique();
+        PaquetDeCartes monPaquet = maFabrique.getPaquetVide();
+        try {monPaquet.lire("Paquet2Cartes.txt");}
+        catch (ErreurFichier e){System.out.println(e.getMessage());}
+    }
 
 }
 

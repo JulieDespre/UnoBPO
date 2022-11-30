@@ -114,7 +114,7 @@ public class PaquetDeCartes {
         if (monfichier.exists()) throw new ErreurFichier("Le fichier existe déjà");
         try {
             flot = new FileWriter(monfichier);
-            flotP = new PrintWriter(flot);//buggeredwriter amélioré
+            flotP = new PrintWriter(flot);//bufferedwriter amélioré
             for (Carte carte : paquet) {
                 flotP.println("" + carte.getClass().getSimpleName() + " " + carte.getValeur() + " " + carte.getCouleur());
             }
@@ -161,17 +161,42 @@ public class PaquetDeCartes {
                         int newVal = Integer.parseInt(str[1]);
                         Chiffre c1 = new Chiffre(newVal, maCouleur);
                         paquet.add(c1);
+                        break;
+                    case ("PasseTonTour"):
+                        int newVal1 = Integer.parseInt(str[1]);
+                        PasseTonTour c2 = new PasseTonTour(newVal1, maCouleur);
+                        paquet.add(c2);
+                        break;
+                    case ("ChangementDesSens"):
+                        int newVal2 = Integer.parseInt(str[1]);
+                        ChangementDeSens c3 = new ChangementDeSens(newVal2, maCouleur);
+                        paquet.add(c3);
+                        break;
+                    case ("Joker"):
+                        int newVal3 = Integer.parseInt(str[1]);
+                        Joker c4 = new Joker(newVal3, maCouleur);
+                        paquet.add(c4);
+                        break;
+                    case ("Plus2"):
+                        int newVal4 = Integer.parseInt(str[1]);
+                        Plus2 c5 = new Plus2(newVal4, maCouleur);
+                        paquet.add(c5);
+                        break;
+                    case ("Plus4"):
+                        int newVal5 = Integer.parseInt(str[1]);
+                        Plus4 c6 = new Plus4(newVal5, maCouleur);
+                        paquet.add(c6);
+                        break;
                 }
                 ligne = flotFiltre.readLine();
             }
-            System.out.println("le paquet de carte est : \n" + paquet);
-
-
+            System.out.println("le paquet de carte est composé de ces cartes : \n" );
+            for (Carte carte : paquet) {
+                System.out.println(carte);
+            }
         } catch (IOException e) {
-            //l'exception est déjà récupérée comme demandée
             throw new RuntimeException(e);
         }
-
     }
 }
 
