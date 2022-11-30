@@ -136,7 +136,6 @@ public class PaquetDeCartes {
             //lecture du fichier d'entrée
             String ligne = flotFiltre.readLine();
             while (ligne != null && !ligne.equals("")) {
-                ligne = flotFiltre.readLine();
                 String[] str=ligne.split(" ");
                 Couleur maCouleur=Couleur.NOIR;
                 switch (str[2]) {
@@ -191,9 +190,7 @@ public class PaquetDeCartes {
                 ligne = flotFiltre.readLine();
             }
             System.out.println("le paquet de carte est composé de ces cartes : \n" );
-            for (Carte carte : paquet) {
-                System.out.println(carte);
-            }
+                System.out.println(this);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

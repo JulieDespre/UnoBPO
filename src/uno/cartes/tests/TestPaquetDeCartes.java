@@ -74,6 +74,8 @@ public class TestPaquetDeCartes {
         //paquet 2 cartes meme couleur chiffre, plus2 (rouge)
         FabriqueCartes maFabrique4 = FabriqueCartes.getFabrique();
         PaquetDeCartes monPaquet4 = maFabrique4.getPaquet2Diff();
+        try{monPaquet4.ecrire("Paquet2CartesDiff.txt");}
+        catch (ErreurFichier e){System.out.println(e.getMessage());}
         int test4 = monPaquet4.getNombreDeCartes();
         Assertions.assertEquals(2, test4);
     }
@@ -101,6 +103,8 @@ public class TestPaquetDeCartes {
         //paquet 5 cartes meme couleur (verte)
         FabriqueCartes maFabrique7 = FabriqueCartes.getFabrique();
         PaquetDeCartes monPaquet7 = maFabrique7.getPaquet5Vert();
+        try{monPaquet7.ecrire("Paquet5CartesDiff.txt");}
+        catch (ErreurFichier e){System.out.println(e.getMessage());}
         int test7 = monPaquet7.getNombreDeCartes();
         Assertions.assertEquals(5, test7);
     }
@@ -202,6 +206,7 @@ public class TestPaquetDeCartes {
         PaquetDeCartes monPaquet4 = maFabrique4.getPaquet2Diff();
         Chiffre c2 = new Chiffre(uno, 8, Couleur.ROUGE);
         monPaquet4.ajouter(c2);
+        System.out.println(monPaquet4);
         int test4 = monPaquet4.getNombreDeCartes();
         Assertions.assertEquals(3, test4);
     }
@@ -419,10 +424,17 @@ public class TestPaquetDeCartes {
         catch (ErreurFichier e){System.out.println(e.getMessage());}
     }
     @Test
-    public void testLire2CartesDiff() {//en cours
+    public void testLire2CartesDiff() {
         FabriqueCartes maFabrique = FabriqueCartes.getFabrique();
         PaquetDeCartes monPaquet = maFabrique.getPaquetVide();
-        try {monPaquet.lire("Paquet2Cartes.txt");}
+        try {monPaquet.lire("Paquet5CartesDiff.txt");}
+        catch (ErreurFichier e){System.out.println(e.getMessage());}
+    }
+    @Test
+    public void testLirePaquetStandard() {
+        FabriqueCartes maFabrique = FabriqueCartes.getFabrique();
+        PaquetDeCartes monPaquet = maFabrique.getPaquetVide();
+        try {monPaquet.lire("paquetStandard.txt");}
         catch (ErreurFichier e){System.out.println(e.getMessage());}
     }
 
