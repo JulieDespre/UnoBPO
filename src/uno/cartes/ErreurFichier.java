@@ -7,6 +7,7 @@ public class ErreurFichier extends IOException {
     String message;
 
     public ErreurFichier(String message){
+
         this.message=message;
     }
 

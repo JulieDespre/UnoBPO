@@ -11,7 +11,6 @@ public abstract class Carte {
     protected Uno uno;
 
     public Carte (Uno u){
-
         this.uno = u;
     }
 
