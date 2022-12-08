@@ -35,11 +35,7 @@ public class PaquetDeCartes {
     }
 
     public boolean estVide() {
-        if (paquet.size() == 0) {
-            return true;
-        } else {
-            return false;
-        }
+        return paquet.size() == 0;
 
     }
 
@@ -52,12 +48,7 @@ public class PaquetDeCartes {
     }
 
     public Carte getSommet() {
-        //int sommet = 0;
-        //if (this.estVide() == true){
-        //return sommet;
-        // }else {
         return (paquet.get((paquet.size()) - 1));
-        //}
     }
 
     public Carte piocher() {
@@ -73,9 +64,6 @@ public class PaquetDeCartes {
                 paquet.remove(i);
                 break;
             }
-
-            //if (paquet.contains(carte)){
-            //paquet.remove(carte);
         }
     }
 
@@ -102,7 +90,9 @@ public class PaquetDeCartes {
     public String toString() {
         StringBuilder sb = new StringBuilder("Paquet:\n");
         for (Carte c : paquet) {
-            sb.append(c + "\n");
+            sb
+                    .append(c)
+                    .append("\n");
         }
         return sb.toString();
     }
