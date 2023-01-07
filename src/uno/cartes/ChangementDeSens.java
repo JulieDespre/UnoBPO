@@ -20,7 +20,7 @@ public class ChangementDeSens extends Carte{
     }
     @Override
     public void appliquerEffet() {
-
+        uno.changer2sens();
     }
 
     @Override
@@ -43,4 +43,7 @@ public class ChangementDeSens extends Carte{
         }
     }
 
+    public String toString(){
+        return "ChangementDeSens, "+couleur;
+    }
 }

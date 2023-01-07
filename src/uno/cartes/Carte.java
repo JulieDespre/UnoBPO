@@ -90,10 +90,4 @@ public abstract class Carte {
         this.uno = uno;
     }
 
-    public String toString() {
-        return "Carte{" +
-                "valeur=" + valeur + ", couleur=" + couleur + '}';
-    }
-
-
 }
