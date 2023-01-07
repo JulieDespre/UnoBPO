@@ -10,7 +10,7 @@ import java.io.IOException;
 
 
 public class TestPaquetDeCartes {
-    private Uno uno;
+    private static Uno uno;
 
     @BeforeEach
     public void setUp() {
@@ -18,7 +18,7 @@ public class TestPaquetDeCartes {
     }
 
     @Test
-    public void TestPaquet2Cartes() {
+    private static void TestPaquet2Cartes() { //pb avec privae static
         Chiffre c1 = new Chiffre(uno, 5,Couleur.ROUGE);
         Chiffre c2 = new Chiffre(uno, 7,Couleur.JAUNE);
         PaquetDeCartes monPaquet = new PaquetDeCartes();
