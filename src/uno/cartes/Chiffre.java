@@ -51,4 +51,7 @@ public class Chiffre extends Carte{
         }
     }
 
+    public String toString(){
+        return valeur+", "+couleur;
+    }
 }

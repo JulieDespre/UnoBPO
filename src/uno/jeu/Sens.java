@@ -14,6 +14,8 @@ public enum Sens {
 
             return sens;
         }
-        //public int inverser(){
-       // }
+        public Sens inverser(){
+            if (sens==1) return Sens.ANTIHORAIRE;
+            else return Sens.HORAIRE;
+        }
 }

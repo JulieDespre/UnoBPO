@@ -19,7 +19,7 @@ public class PasseTonTour extends Carte{
 
     @Override
     public void appliquerEffet() {
-
+        uno.sauterTour();
     }
 
     @Override
@@ -41,5 +41,9 @@ public class PasseTonTour extends Carte{
         } else {
             return false;
         }
+    }
+
+    public String toString(){
+        return "PasseTonTour, "+couleur;
     }
 }

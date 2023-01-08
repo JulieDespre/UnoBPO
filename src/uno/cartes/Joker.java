@@ -19,7 +19,7 @@ public class Joker extends Carte {
 
     @Override
     public void appliquerEffet() {
-
+        uno.setCouleur();
     }
 
     @Override
@@ -63,5 +63,10 @@ public class Joker extends Carte {
         } else {
             return false;
         }
+    }
+
+    @Override
+    public String toString(){
+        return "Joker";
     }
 }

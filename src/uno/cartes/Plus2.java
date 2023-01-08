@@ -20,7 +20,8 @@ public class Plus2 extends Carte{
 
     @Override
     public void appliquerEffet() {
-
+        uno.sauterTour();
+        uno.piocher(2);
     }
 
     @Override
@@ -41,5 +42,10 @@ public class Plus2 extends Carte{
         } else {
             return false;
         }
+    }
+
+    @Override
+    public String toString(){
+        return "Plus2, "+couleur;
     }
 }

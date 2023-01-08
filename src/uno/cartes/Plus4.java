@@ -17,9 +17,17 @@ public class Plus4 extends Joker{
     }
     @Override
     public void appliquerEffet() {
+        super.appliquerEffet();
+        uno.sauterTour();
+        uno.piocher(4);
     }
     @Override
     public boolean peutEtrePoseeSur(Plus4 c) {
         return true;
+    }
+
+    @Override
+    public String toString(){
+        return "Plus4";
     }
 }

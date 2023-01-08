@@ -1,19 +1,33 @@
 package uno.cartes;
 
 import uno.jeu.Uno;
-
-
 import static uno.cartes.Couleur.NOIR;
+
+/**
+ * @author Julie Despré
+ * @version janvier 2023
+ */
 
 public abstract class Carte {
     protected int valeur;
     protected Couleur couleur;
     protected Uno uno;
 
+    /**
+     * Constructeur de carte
+     * @param u qui correspond a un uno
+     */
     public Carte (Uno u){
         this.uno = u;
     }
 
+    /**
+     * Constructeur de carte à parti d'un uno, d'un entier et d'une couleur issue de l'énumération Couleur
+     * @param uno
+     * @param valeur qui correspond soit au chiffre de la carte soit à sa valeur
+     * @param couleur qui est définie dans l'énumération couleur
+     * @exception AssertionError si mess est null
+     */
     public Carte(Uno uno, int valeur, Couleur couleur) {
         this.valeur = valeur;
         this.couleur = couleur;
