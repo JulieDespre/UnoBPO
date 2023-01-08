@@ -129,6 +129,10 @@ public class FabriqueCartes {
     }
     public PaquetDeCartes getPaquetStandard() {
         Uno uno = new Uno ();
+        return getPaquetStandard(uno);
+    }
+
+    public PaquetDeCartes getPaquetStandard(Uno uno) {
         PaquetDeCartes paquetStandard = new PaquetDeCartes ();
         //cartes vertes
         //creation zéro

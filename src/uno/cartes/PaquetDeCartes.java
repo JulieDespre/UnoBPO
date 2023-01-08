@@ -3,9 +3,10 @@ package uno.cartes;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.Random;
 
-public class PaquetDeCartes {
+public class PaquetDeCartes implements Iterable<Carte>{
 
     private ArrayList<Carte> paquet;
 
@@ -57,6 +58,9 @@ public class PaquetDeCartes {
         return newCarte;
     }
 
+    public Carte getByIndex(int n){
+        return paquet.get(n);
+    }
 
     public void enlever(Carte carte) {
         for (int i = 0; i < paquet.size(); i++) {
@@ -69,7 +73,7 @@ public class PaquetDeCartes {
 
     public void melanger() {
         Random g = new Random();
-        for (int i = 0; i < 20; i++) {
+        for (int i = 0; i < paquet.size()*100; i++) {
             swap(g.nextInt(paquet.size()), g.nextInt(paquet.size()));
         }
     }
@@ -89,10 +93,15 @@ public class PaquetDeCartes {
 
     public String toString() {
         StringBuilder sb = new StringBuilder("Paquet:\n");
+        int i=0;
         for (Carte c : paquet) {
             sb
+                    .append("Carte ")
+                    .append(i)
+                    .append(": ")
                     .append(c)
                     .append("\n");
+            i++;
         }
         return sb.toString();
     }
@@ -184,6 +193,11 @@ public class PaquetDeCartes {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    @Override
+    public Iterator<Carte> iterator() {
+        return paquet.iterator();
     }
 }
 
